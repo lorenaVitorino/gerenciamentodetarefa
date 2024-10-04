@@ -1,38 +1,139 @@
+/* Estilo geral do corpo */
+body {
+  background-color: #000000; /* Fundo preto */
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: white;
+}
+
+/* Estilo da caixa principal */
 .App {
+  background-color: #ff1493; /* Fundo rosa escuro */
+  border: 5px solid #ff69b4; /* Bordas rosas */
+  border-radius: 20px;
+  padding: 40px;
+  max-width: 500px;
+  width: 100%;
   text-align: center;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Estilo dos botões */
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: white; /* Fundo branco */
+  color: #000; /* Texto preto */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Efeito ao passar o mouse sobre os botões */
+button:hover {
+  transform: scale(1.05); /* Expande ao passar o mouse */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Estilo do formulário */
+.task-form {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-bottom: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+input[type="text"], textarea {
+  width: 80%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: 1px solid white;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  background-color: white;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+/* Estilo dos links de navegação */
+nav {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
+  padding: 10px 20px;
+  background-color: white;
+  border: 2px solid white;
+  border-radius: 5px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+nav a:hover {
+  transform: scale(1.1);
+  background-color: lightgray;
+}
+.task-item {
+  margin: 10px 0;
+  padding: 10px 0; /* Adiciona espaço ao redor do item */
+  border-bottom: 1px solid rgb(255, 255, 255); /* Opcional: para melhor separação visual */
+}
+
+/* Adicione esta classe no CSS */
+.delete-button { 
+  display: flex;
+  align-items: center;
+  text-align: center;
+  gap: 10px; /* Espaçamento entre os botões */
+  margin-top: 10px; 
+  text-decoration: none;
+
+}
+/* Estilo do grupo de botões */
+.button-group {
+  display: flex;
+  justify-content: space-between; /* Para distribuir espaço igualmente */
+  margin-top: 20px; /* Espaço acima do grupo */
+  margin-bottom: 20px; /* Espaço abaixo do grupo */
+ 
+}
+.button_tarefas{
+  padding: 10px 20px;
+  text-decoration: none;
+  font-size: 16px;
+  background-color: white; /* Fundo branco */
+  color: #000; /* Texto preto */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+.button_tarefas:hover{
+  transform: scale(1.05);
+}
+.button-group button {
+  flex: 1; /* Para que todos os botões tenham o mesmo tamanho */
+  margin: 0 10px; /* Espaço lateral entre os botões */
+  
+}
+
+.task-itens{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 10px 0;
+  padding: 10px 0; /* Adiciona espaço ao redor do item */
+  border-bottom: 2px solid rgb(255, 255, 255); /* Opcional: para melhor separação visual */
 }
